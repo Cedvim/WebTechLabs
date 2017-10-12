@@ -36,18 +36,55 @@
 				<version>1.2.1</version>
 				<executions>
 					<execution>
+						<id> build-app </id>
 						<goals>
 							<goal>java</goal>
 						</goals>
+						<configuration>
+							<mainClass>dblab.hello.App</mainClass>
+							<arguments>
+								<argument>foo</argument>
+								<argument>bar</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id> build-log4jBasics </id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>ex01C.Log4jBasics</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<id> build-C </id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>ex01D.C</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<id> build-A </id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>ex01E.A</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<id> build-F </id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>ex01F.ToStringOverloading</mainClass>
+						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<mainClass>dblab.hello.App</mainClass>
-					<arguments>
-						<argument>foo</argument>
-						<argument>bar</argument>
-					</arguments>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

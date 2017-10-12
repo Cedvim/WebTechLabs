@@ -1,6 +1,11 @@
 package ex01E;
 
+import org.apache.log4j.Logger;
+
 class A {
+	
+	protected static Logger log = Logger.getLogger(A.class);
+	
 	int x;
 
 	void m() {
@@ -25,8 +30,15 @@ class C extends B {
 
 	void test() { 
 		a = super.x;
+		log.debug("super.x = " + a);
+		log.debug("x = " + x);
+		
 		a = ((B)this).x;
+		log.debug("((B)this).x = " + a);
+		
 		a = ((A)this).x;
+		log.debug("((A)this).x = " + a);
+		
 		super.m();
 		((B)this).m(); // (1) 
 		}
