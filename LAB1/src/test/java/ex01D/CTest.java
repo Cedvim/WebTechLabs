@@ -1,11 +1,17 @@
 package ex01D;
 
+import org.apache.log4j.Logger;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /** * Unit test for simple App. */
 public class CTest extends TestCase {
+	
+	//Définition des logs
+	protected static Logger log = Logger.getLogger(C.class);
+	
 	/** * Create the test case * * @param testName name of the test case */
 	public CTest(String testName) {
 		super(testName);
@@ -13,17 +19,30 @@ public class CTest extends TestCase {
 
 	/** * @return the suite of tests being tested */
 	public static Test suite() {
-		System.out.println("Testing C");
 		return new TestSuite(CTest.class);
 	}
 
-	/** * Rigourous Test :-) */
+	/** * Test de C */
 	public void testApp() {
+		
+		//Initialisation des variables
 		StringBuffer s = new StringBuffer("abc");
 		int i=0;
-		C.method1(i, s);
-		assertEquals(i, 0);
-		System.out.println(i + " = i right value");
-		assertEquals(s.toString(), "abcd");	
+
+		//Log des valeurs de i et s
+		log.debug("i = " + i);
+		log.debug("s = " + s);
+		
+		//Appel de method1() dans C
+		C.method1(i, s); 
+		log.info("method1(i,s) is called");
+		
+		//Vérification de (i = 0)
+		assertEquals(i, 0); //return false si i≠0, sinon continue
+		log.debug("i = 0 : right value");
+		
+		//Vérification de (s = "abcd")
+		assertEquals(s.toString(), "abcd");	//return false si s≠"abcd", sinon continue
+		log.debug("s = \"abcd\" : right value");
 	}
 }
