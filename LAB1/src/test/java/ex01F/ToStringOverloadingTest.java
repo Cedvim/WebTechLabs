@@ -20,6 +20,8 @@ public class ToStringOverloadingTest extends TestCase {
 
 	/** * @return the suite of tests being tested */
 	public static Test suite() {
+		System.out.println("------TOSTRINGOVERLOADING AND CIRCLE TEST------");
+		System.out.println("(Here toString() is highlighted when called implicitely or explicitely)");
 		return new TestSuite(ToStringOverloadingTest.class);
 	}
 
@@ -30,10 +32,11 @@ public class ToStringOverloadingTest extends TestCase {
 		int y1 = 0;
 		int radius1 = 5;
 		
-		//Création du premier cercle
+		//Création et affichage du premier cercle
 		Circle c1 = new Circle(x1,y1,radius1);
-		log.debug("Circle c1 is created");
+		log.info("Circle c1 is created");
 		System.out.println(c1);
+		System.out.println("(Displayed c1)");
 		
 		//Vérification de la valeur du premier cercle
 		assertEquals(c1.toString(),"Circle with center (0,0) and radius 5 (Perimter is 31,42)");
@@ -47,8 +50,9 @@ public class ToStringOverloadingTest extends TestCase {
 		
 		//Création du second cercle
 		Circle c2 = new Circle(x2,y2,radius2);
-		log.debug("Circle c2 is created");
+		log.info("Circle c2 is created");
 		System.out.println(c2);
+		System.out.println("(Displayed c2)");
 		
 		//Vérification de la valeur du second cercle
 		assertEquals(c2.toString(),"Circle with center (0,0) and radius 3 (Perimter is 18,85)");

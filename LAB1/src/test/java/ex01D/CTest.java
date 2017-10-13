@@ -19,6 +19,7 @@ public class CTest extends TestCase {
 
 	/** * @return the suite of tests being tested */
 	public static Test suite() {
+		System.out.println("------C TEST------");
 		return new TestSuite(CTest.class);
 	}
 
@@ -38,11 +39,13 @@ public class CTest extends TestCase {
 		log.info("method1(i,s) is called");
 		
 		//Vérification de (i = 0)
+		log.debug("i = " + i);
 		assertEquals(i, 0); //return false si i≠0, sinon continue
-		log.debug("i = 0 : right value");
+		log.debug("i has the right value");
 		
 		//Vérification de (s = "abcd")
+		log.debug("s = " + s);
 		assertEquals(s.toString(), "abcd");	//return false si s≠"abcd", sinon continue
-		log.debug("s = \"abcd\" : right value");
+		log.debug("s has the right value");
 	}
 }

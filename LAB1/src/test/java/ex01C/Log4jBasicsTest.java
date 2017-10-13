@@ -18,12 +18,14 @@ public class Log4jBasicsTest extends TestCase {
 
 	/** * @return the suite of tests being tested */
 	public static Test suite() {
+		System.out.println("------LOG4JBASICS TEST------");
+		System.out.println("(Test for log.info and log.debug)");
 		return new TestSuite(Log4jBasicsTest.class);
 	}
 
 	/** * Test de Log4jBasics */
 	public void testApp() {
-		System.out.println("main() returns (you should see DEBUG and INFO):"); 
+		log.info("main() returns :"); 
 		Log4jBasics.main(null);
 	}
 }

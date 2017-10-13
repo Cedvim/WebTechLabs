@@ -14,12 +14,12 @@ public class AppTest extends TestCase {
 
 	/** * @return the suite of tests being tested */
 	public static Test suite() {
+		System.out.println("------APP TEST------");
 		return new TestSuite(AppTest.class);
 	}
 
 	/** * Test de App */
 	public void testApp() {
-		System.out.println("main() returns :");
-//		App.main(null);
+		System.out.println("AppTest works");
 	}
 }

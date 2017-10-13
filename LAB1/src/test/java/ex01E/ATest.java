@@ -19,12 +19,13 @@ public class ATest extends TestCase {
 
 	/** * @return the suite of tests being tested */
 	public static Test suite() {
+		System.out.println("------A TEST------");
 		return new TestSuite(ATest.class);
 	}
 
 	/** * Test de A */
 	public void testApp() {
-		//m() ne peut pas être appelée en dehors de C, on teste dans la méthode main()
+		//m() ne peut pas être appelée en dehors de C, on teste donc la méthode main()
 		C.main(null);
 	}
 }
