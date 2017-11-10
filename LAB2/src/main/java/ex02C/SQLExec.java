@@ -73,7 +73,7 @@ public class SQLExec {
 				
 				String header = "";
 				for (int i=1; i <= rows; i++) {
-					header = header + data.getColumnLabel(i);
+					header = header + data.getColumnLabel(i) + " \t ";
 				}
 				
 				//Print the header of the result table
@@ -85,7 +85,7 @@ public class SQLExec {
 					String field = "";
 					field += row + " \t ";
 					for (int i=1; i <= rows; i++) {
-						field = field + resultSet.getString(i);
+						field = field + resultSet.getString(i) + " \t ";
 					}
 					row++;
 					

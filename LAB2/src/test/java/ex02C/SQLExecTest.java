@@ -32,7 +32,7 @@ public class SQLExecTest extends TestCase {
 			args[1] = "com.mysql.jdbc.Driver";
 			args[2] = "root";
 			args[3] = "root";
-			args[4] = "SELECT last_name FROM actor";
+			args[4] = "SELECT first_name FROM actor";
 			
 			//Test getting given arguments
 			sqlExec.getArgs(args);
