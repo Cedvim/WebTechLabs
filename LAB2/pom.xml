@@ -71,7 +71,7 @@
 							<goal>java</goal>
 						</goals>
 						<configuration>
-							<mainClass>ex02C.SQLExec</mainClass>
+							<mainClass>ex02C.DBMain</mainClass>
 						</configuration>
 					</execution>
 					
