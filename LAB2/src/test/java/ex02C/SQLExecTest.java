@@ -1,16 +1,13 @@
 package ex02C;
 
 import org.apache.log4j.Logger;
-
-import ex02B.DatabaseConnection;
-import ex02B.DatabaseConnectionTest;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class SQLExecTest extends TestCase {
 		//Définition des logs
-		protected static Logger log = Logger.getLogger(DatabaseConnection.class);
+		protected static Logger log = Logger.getLogger(SQLExecTest.class);
 		
 		/** * Create the test case * * @param testName name of the test case */
 		public SQLExecTest(String testName) {

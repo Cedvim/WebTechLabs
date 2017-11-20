@@ -2,13 +2,12 @@ package ex02D;
 
 import org.apache.log4j.Logger;
 
-import ex02B.DatabaseConnection;
 
 public class DBMain 
 {
     private static DBBase dbBase;
     private static DBFile dbFile;
-	protected static Logger log = Logger.getLogger(DatabaseConnection.class);//Logs definition
+	protected static Logger log = Logger.getLogger(DBMain.class);//Logs definition
     
     public DBMain(){
     }

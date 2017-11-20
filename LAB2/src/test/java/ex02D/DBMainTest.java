@@ -1,17 +1,13 @@
 package ex02D;
 
 import org.apache.log4j.Logger;
-
-import ex02B.DatabaseConnection;
-import ex02B.DatabaseConnectionTest;
-import ex02C.SQLExec;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 public class DBMainTest extends TestCase {
 		//Définition des logs
-		protected static Logger log = Logger.getLogger(DatabaseConnection.class);
+		protected static Logger log = Logger.getLogger(DBMainTest.class);
 	    private static DBBase dbBase;
 		
 		/** * Create the test case * * @param testName name of the test case */
