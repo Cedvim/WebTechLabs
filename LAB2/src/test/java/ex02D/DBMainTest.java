@@ -28,9 +28,14 @@ public class DBMainTest extends TestCase {
 		/** * Test de App 
 		 * @throws Exception */
 		public void testApp() throws Exception {
+			
 			dbBase = DBBaseFactory.DBBaseFactory("sakila");
+			log.info("DB SAKILA RECREATED IN OBJECTS");
+			
+			log.info("CONVERTING TO SQL");
 			String sqlInstruction = dbBase.toSQL();
 			assertNotSame(sqlInstruction,"");
+			log.info("SQL INSTRUCTIONS HAVE BEEN GENERATED");
 			
 			//If here, DBMain works
 			log.info("DBMAIN WORKS");
