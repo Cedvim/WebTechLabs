@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <title>Hello ISEP! Calculator</title>
+        <link href="./css/site.css" rel="stylesheet">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="row">
+                <h1>Dummy Calculator</h1>
+            </div>
+
+            <div class="form-group">
+                <input id="formula" value="" placeholder="Enter your formula here" type="text" class="form-control"></input>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-1"></div>
+
+                <div class="col-md-4 resultArea">
+                    <button id="checkButton" class="btn btn-warning buttons"> Check </button>
+                    <h4> Formula status </h4>
+                    <p id="verif">  </p>
+                </div>
+
+                <div class="col-md-2"></div>
+
+                <div class="col-md-4 resultArea">
+                    <button id="evalButton" class="btn btn-primary buttons"> Evaluate </button>
+                    <h4> Formula status</h4>
+                    <p id="verif2">  </p>
+
+                    <hr>
+
+                    <h4> Result </h4>
+                    <p id="result">  </p>
+                </div>
+
+                <div class="col-md-1"></div>
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/build/app.js"></script>
+
+    </body>
+</html>
