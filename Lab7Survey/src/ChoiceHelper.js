@@ -32,7 +32,7 @@ import Survey from './components/Survey.js';
                 }
                 choice.percentage = Math.floor(choice.votes/votesNumber*100);
                 if(votesNumber==0){ 
-                    choice.vote = 0;
+                    choice.votes = 0;
                     choice.percentage = 0;
                 }
             });

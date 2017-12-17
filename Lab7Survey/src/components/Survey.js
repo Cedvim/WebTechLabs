@@ -35,7 +35,7 @@ class Survey extends Component {
 
     render() {
       return (
-        <div>
+        <div className ="survey">
           <h1>Quel est votre série préférée ?</h1>
           <br/>
           <Percentages choices={this.state.choices}/>
