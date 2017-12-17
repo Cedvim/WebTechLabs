@@ -1,34 +1,19 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
+import Paper from 'material-ui/Paper';
 
-//var idName = "percent" + props.id;
+// Affichage des blocks de pourcentage => on les place dans un bloc ombré (Paper en Material-UI)
 const Percentage = (props) => (
-        <div id={"percent" + props.id} className="percentages">
+        <Paper zDepth={1} id={"percent" + props.id}  className="percentages">
           {props.content} :  {props.percentage}%
-        </div>
+        </Paper>
 );
 export default Percentage;
 
+//Proptypes
 Percentage.propTypes = {
   id: PropTypes.number.isRequired,
   content: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired
 }
-
-// class Percentages extends Component {
-
-
-//     render() {
-    
-//       var idName = "percent" + this.props.id;
-//       console.log(this.props.percentage)
-//       return (
-//         <div id={idName} className="percentages">
-//           {this.props.content} :  {this.props.percentage}%
-//         </div>
-//       );
-//     }
-//   }
-  //console.log(choicesList);
   

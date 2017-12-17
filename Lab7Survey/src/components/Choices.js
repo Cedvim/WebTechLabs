@@ -1,47 +1,21 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Choice from './Choice';
 import PropTypes from 'prop-types';
 
-// const Choices = (props) => props.choices.map(
-        
-//         t =>
-//         <div className="choices">
-//           <Choice
-//                 key={t.id}
-//                 {...t}
-//                 updateMethod={props.updateMethod}
-//               />
-//         </div>
-// );
-
-// // Choices.propTypes = {
-// //   id: PropTypes.number.isRequired
-// // }
-
-  
-//   export default Choices;
-
+//Composant Choix (multiples)
 class Choices extends Component {
 
-    displayChoices(){
-      return this.props.choices.map(
-        
-        t => 
-        <Choice
-          key={t.id}
-          {...t}
-          updateMethod={this.props.updateMethod}
-        />
-      ); 
-    }
-
+    //Fonction d'affichage général => on affiche un seul composant, donc pas de besoin d'une fonction "displayChoices"
     render() {
       return (
-        <div className="choices">
-          {this.displayChoices()}
-        </div>
-      );
+        this.props.choices.map(
+          t =>  <Choice
+            key={t.id}
+            {...t}
+            updateMethod={this.props.updateMethod}
+          />
+        ) 
+      )
     }
   }
   
